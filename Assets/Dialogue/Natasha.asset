@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be05d3cf9eba8ac4b8912f6ba749f09f, type: 3}
+  m_Name: Natasha
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Oh, hello there. I didn't expect to see anyone out here, especially not you.
+  - "You seem a bit lost, but that's nothing new around here. Everyone\u2019s trying
+    to figure out what comes next... The question is, are you ready for the truth?"
+  - "What if I told you that there are more ways to win than just choosing one or
+    the other? But then again, those paths... they come with consequences. Maybe
+    you\u2019re not ready for that. Or maybe you are."
+  - "I\u2019ll let you think on it. But don\u2019t be too quick to decide. Life has
+    a funny way of making us regret the choices we make, especially when the heart
+    is involved."
+  responses: []

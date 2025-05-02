@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be05d3cf9eba8ac4b8912f6ba749f09f, type: 3}
+  m_Name: Mushi
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Welcome, traveler. You look like you\u2019ve been through a lot. This potion
+    will restore your health, but I can only give it to you once, so use it wisely."
+  - Press 'H' to receive the health potion.
+  responses: []

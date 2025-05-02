@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be05d3cf9eba8ac4b8912f6ba749f09f, type: 3}
+  m_Name: Prince
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Ah, finally, you've arrived. I\u2019ve been waiting for you\u2026 it seems fate
+    has brought us together. I knew you\u2019d come, even though the world tried
+    to pull us apart. You\u2019re special, aren't you? So special... that you deserve
+    something beyond the ordinary."
+  - You see, there are two paths before you. The key... it's tempting, isn't it?
+    The power it offers, the safety, the guarantee. But is that truly what you want?
+    Is that what your heart longs for?
+  - "The heart... now that\u2019s something different. The heart will choose me,
+    and with me, you could have everything. Everything you've ever dreamed of, a
+    life of luxury and fulfillment... if you just trust me."
+  - Think about it. The key is an illusion, a temporary fix. But with me, we can
+    rule the future. A future where we are invincible... where I can make all your
+    dreams come true.
+  - "The choice is yours, but remember: the heart will choose me, and with me, you
+    will be invincible. Don\u2019t let their lives hold you back. You know what you
+    truly want deep down\u2026 don\u2019t fight it."
+  - "I\u2019ll be waiting, of course. Whenever you\u2019re ready to make the right
+    choice, I\u2019ll be here, by your side\u2026 forever. Don\u2019t take too long,
+    though... time is fleeting, and so is our chance."
+  responses:
+  - responseText: Yes
+    dialogueObject: {fileID: 11400000, guid: 5cb17bc09f5267241a535bc7be3c264b, type: 2}
+  - responseText: No
+    dialogueObject: {fileID: 11400000, guid: aff3a4595378c42468a6a207b327f137, type: 2}
