@@ -75,7 +75,5 @@ public class HeartOrKeyLogic : MonoBehaviour
             prince.SetActive(false); // Prince dies
             Debug.Log("Prince dies");
         }
-
-        // Additional logic here, such as adding effects
     }
 }
