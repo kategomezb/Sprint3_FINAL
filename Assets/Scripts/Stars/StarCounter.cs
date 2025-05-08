@@ -12,8 +12,9 @@ public class StarCounter : MonoBehaviour
 
     public GameObject glassHeartRoom;
     public GameObject glassKeyRoom;
+    public AudioClip breakClip;
 
-    public TextMeshProUGUI starText; // Add this reference
+    public TextMeshProUGUI starText; 
 
     private void Awake()
     {

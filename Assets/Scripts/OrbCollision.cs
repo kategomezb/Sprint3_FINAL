@@ -18,12 +18,13 @@ public class OrbCollision : MonoBehaviour
             if (playerController != null)
             {
                 playerController.ApplyJumpBoost(jumpBoostAmount, boostDuration);
+                playerController.OnGrabOrb();
             }
 
             canCollect = false;
             Destroy(gameObject);
 
-            // Optional: add cooldown or respawn logic here
+           
         }
     }
 }

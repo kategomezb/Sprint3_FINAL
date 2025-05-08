@@ -26,6 +26,8 @@ public class FPSController : MonoBehaviour
     private float originalWalkSpeed;
     private float originalRunSpeed;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -34,6 +36,8 @@ public class FPSController : MonoBehaviour
 
         originalWalkSpeed = walkSpeed;
         originalRunSpeed = runSpeed;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -52,6 +56,7 @@ public class FPSController : MonoBehaviour
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+
         }
         else
         {
@@ -107,6 +112,15 @@ public class FPSController : MonoBehaviour
         else
         {
             Debug.LogWarning("Sphere prefab is not assigned!");
+        }
+    }
+
+    public void OnGrabOrb()
+    {
+        // Play the jump sound or any other sound you wish
+        if (audioSource != null && !audioSource.isPlaying)
+        {
+            audioSource.Play();  // Play the sound attached to the AudioSource
         }
     }
 

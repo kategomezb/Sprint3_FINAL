@@ -5,7 +5,7 @@ using UnityEngine;
 public class Advisor2Trigger : MonoBehaviour
 {
     [SerializeField] private Advisor2NPCSystem npcSystem;  // Reference to the NPCSystem
-
+    [SerializeField] private AudioSource npcSound;
 
 
     private void OnTriggerEnter(Collider other)
@@ -14,7 +14,8 @@ public class Advisor2Trigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            npcSystem.ShowDialogue(npcSystem.testDialogue);  // Show the dialogue when the player is in range
+            npcSystem.ShowDialogue(npcSystem.testDialogue);
+            npcSound.Play();
         }
     }
 
@@ -24,7 +25,8 @@ public class Advisor2Trigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            npcSystem.CloseDialogueBox();  // Close the dialogue box when the player exits
+            npcSystem.CloseDialogueBox();
+            npcSound.Stop();
         }
     }
 }
