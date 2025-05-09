@@ -24,7 +24,7 @@ public class MonsterChase : MonoBehaviour
         }
         else
         {
-            agent.ResetPath(); // Stop moving when out of range
+            agent.ResetPath();
         }
     }
     void OnTriggerEnter(Collider other)

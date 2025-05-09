@@ -18,7 +18,6 @@ public class StarCollectible : MonoBehaviour
             audioSource.Play();
             StarCounter.Instance.CollectStar();
             Destroy(gameObject, audioSource.clip.length);
-            //Destroy(gameObject); // remove the star
         }
     }
 }

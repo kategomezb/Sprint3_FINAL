@@ -44,7 +44,6 @@ public class StarCounter : MonoBehaviour
             starText.text = "   : " + starsCollected.ToString();
         }
     }
-
     void BreakGlassRooms()
     {
         Destroy(glassHeartRoom);

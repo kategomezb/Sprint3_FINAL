@@ -6,17 +6,17 @@ public class InteractableItem : MonoBehaviour
 {
     public enum ItemType { Heart, Key }
 
-    public ItemType itemType;  // Type of the item (Heart or Key)
-    public KeyCode interactKey = KeyCode.R;  // Key to interact with the item
+    public ItemType itemType;  
+    public KeyCode interactKey = KeyCode.R;  
 
-    public GameObject heartObject; // Reference to the Heart object
-    public GameObject keyObject;   // Reference to the Key object
+    public GameObject heartObject; 
+    public GameObject keyObject; 
 
-    private bool isPlayerNear = false;  // Is the player near the item?
+    private bool isPlayerNear = false; 
 
     private void Update()
     {
-        // Check if the player presses the interact key when near the item
+        
         if (isPlayerNear && Input.GetKeyDown(interactKey))
         {
             InteractWithItem();
@@ -25,7 +25,6 @@ public class InteractableItem : MonoBehaviour
 
     private void InteractWithItem()
     {
-        // Run logic based on what was chosen
         switch (itemType)
         {
             case ItemType.Heart:
@@ -36,10 +35,9 @@ public class InteractableItem : MonoBehaviour
                 break;
         }
 
-        // Destroy this object
         Destroy(gameObject);
 
-        // Destroy the other object if it's assigned and not this object
+        
         if (heartObject != null && heartObject != gameObject)
         {
             Destroy(heartObject);

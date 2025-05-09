@@ -5,7 +5,7 @@ using System.Collections;
 public class FPSController : MonoBehaviour
 {
     public Camera playerCamera;
-    public GameObject spherePrefab; // Reference to the orb prefab
+    public GameObject spherePrefab; 
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
@@ -19,7 +19,7 @@ public class FPSController : MonoBehaviour
 
     public bool canMove = true;
 
-    private bool hasSpawnedJumpOrb = false; // Flag to allow only one spawn
+    private bool hasSpawnedJumpOrb = false; 
 
     CharacterController characterController;
 
@@ -42,7 +42,6 @@ public class FPSController : MonoBehaviour
 
     void Update()
     {
-        // Movement
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -52,7 +51,7 @@ public class FPSController : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        // Jumping
+       
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
@@ -68,10 +67,9 @@ public class FPSController : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
-        // Move the character
         characterController.Move(moveDirection * Time.deltaTime);
 
-        // Rotation
+       
         if (canMove)
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
@@ -80,7 +78,7 @@ public class FPSController : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
 
-        // Left Click to Spawn Orb (Only Once)
+        
         if (Input.GetMouseButtonDown(0) && !hasSpawnedJumpOrb)
         {
             SpawnSphere();
@@ -95,7 +93,7 @@ public class FPSController : MonoBehaviour
             Vector3 spawnPosition = playerCamera.transform.position + playerCamera.transform.forward * 2;
             GameObject sphere = Instantiate(spherePrefab, spawnPosition, Quaternion.identity);
 
-            // Ensure it has a collider
+            
             SphereCollider sphereCollider = sphere.GetComponent<SphereCollider>();
             if (sphereCollider == null)
             {
@@ -103,7 +101,7 @@ public class FPSController : MonoBehaviour
             }
             sphereCollider.isTrigger = true;
 
-            // Attach OrbCollision script
+            
             if (sphere.GetComponent<OrbCollision>() == null)
             {
                 sphere.AddComponent<OrbCollision>();
@@ -117,10 +115,10 @@ public class FPSController : MonoBehaviour
 
     public void OnGrabOrb()
     {
-        // Play the jump sound or any other sound you wish
+        
         if (audioSource != null && !audioSource.isPlaying)
         {
-            audioSource.Play();  // Play the sound attached to the AudioSource
+            audioSource.Play();  
         }
     }
 

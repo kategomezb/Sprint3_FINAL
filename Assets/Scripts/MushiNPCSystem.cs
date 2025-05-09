@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class MushiNPCSystem : MonoBehaviour
 {
-    [SerializeField] private TMP_Text textLabel;                 // The text field where dialogue is shown
-    [SerializeField] public DialogueObject testDialogue;      // The dialogue to display
-    [SerializeField] private GameObject dialogueBox;             // The dialogue UI box
+    [SerializeField] private TMP_Text textLabel;                 
+    [SerializeField] public DialogueObject testDialogue;     
+    [SerializeField] private GameObject dialogueBox;          
 
     private TypewriterEffect typewriterEffect;
 
@@ -33,8 +33,6 @@ public class MushiNPCSystem : MonoBehaviour
 
         CloseDialogueBox();
     }
-
-    // Change this method to public to allow other scripts to call it
     public void CloseDialogueBox()
     {
         dialogueBox.SetActive(false);

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class GlassRoomDestruction : MonoBehaviour
 {
-    public GameObject glassRoom;  // The glass room object to destroy
+    public GameObject glassRoom; 
 
-    // Call this method to destroy the glass room
     public void DestroyGlassRoom()
     {
         if (glassRoom != null)
         {
-            Destroy(glassRoom); // Destroy the glass room
+            Destroy(glassRoom); 
             Debug.Log("Glass room destroyed");
         }
         else

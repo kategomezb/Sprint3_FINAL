@@ -9,18 +9,17 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public Slider healthSlider;    // UI slider reference
-    public Image fill;             // The fill image inside the slider
-    public Gradient gradient;      // Gradient from green to red
+    public Slider healthSlider;    
+    public Image fill;           
+    public Gradient gradient;      
 
     void Start()
     {
         currentHealth = maxHealth;
 
-        // Initialize slider and color
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
-        fill.color = gradient.Evaluate(1f); // Full health = green
+        fill.color = gradient.Evaluate(1f);
     }
 
     public void Heal(int amount)
@@ -51,14 +50,13 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Restart the scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 
     void UpdateHealthBar()
     {
         healthSlider.value = currentHealth;
 
-        // Update color based on current health %
         fill.color = gradient.Evaluate(healthSlider.normalizedValue);
     }
 }

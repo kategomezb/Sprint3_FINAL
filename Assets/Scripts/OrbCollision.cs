@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class OrbCollision : MonoBehaviour
 {
-    public float jumpBoostAmount = 3f;   // Amount to boost jump power
-    public float boostDuration = 3f;     // Duration for the jump boost
-    public float cooldownTime = 30f;     // Cooldown time before allowing another boost (optional)
+    public float jumpBoostAmount = 3f;  
+    public float boostDuration = 3f;   
+    public float cooldownTime = 30f;    
 
     private bool canCollect = true;
 

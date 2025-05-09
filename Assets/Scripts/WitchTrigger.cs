@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class WitchTrigger : MonoBehaviour
 {
-    [SerializeField] private WitchNPCSystem npcSystem;  // Reference to the NPCSystem
+    [SerializeField] private WitchNPCSystem npcSystem;  
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the player enters the trigger zone
+       
         if (other.CompareTag("Player"))
         {
 
-            npcSystem.ShowDialogue(npcSystem.testDialogue);  // Show the dialogue when the player is in range
+            npcSystem.ShowDialogue(npcSystem.testDialogue);  
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the player exits the trigger zone
+       
         if (other.CompareTag("Player"))
         {
 
-            npcSystem.CloseDialogueBox();  // Close the dialogue box when the player exits
+            npcSystem.CloseDialogueBox();  
         }
     }
 }

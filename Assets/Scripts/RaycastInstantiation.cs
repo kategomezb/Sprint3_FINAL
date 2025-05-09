@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class RaycastInstantiation : MonoBehaviour
 {
-    public Camera playerCamera; // Reference to the player's camera
-    public GameObject objectToSpawn; // Prefab to spawn (e.g., glowing flower)
-    public float raycastDistance = 10f; // Distance for the raycast to check
+    public Camera playerCamera; 
+    public GameObject objectToSpawn; 
+    public float raycastDistance = 10f; 
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) // Left-click to spawn object
+        if (Input.GetMouseButtonDown(1)) 
         {
-            Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition); // Create ray from mouse position
+            Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition); 
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, raycastDistance)) // If ray hits something
+            if (Physics.Raycast(ray, out hit, raycastDistance)) 
             {
-                Instantiate(objectToSpawn, hit.point, Quaternion.identity); // Spawn object at hit point
+                Instantiate(objectToSpawn, hit.point, Quaternion.identity); 
             }
         }
     }

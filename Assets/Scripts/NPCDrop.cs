@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPCDrop : MonoBehaviour
 {
-    public GameObject healthItemPrefab; // assign in Inspector
-    public float interactionRange = 3f; // how close player needs to be
+    public GameObject healthItemPrefab; 
+    public float interactionRange = 3f; 
 
     private Transform player;
     private bool hasDropped = false;
@@ -21,7 +21,7 @@ public class NPCDrop : MonoBehaviour
 
         if (distance <= interactionRange && Input.GetKeyDown(KeyCode.H) && !hasDropped)
         {
-            Vector3 dropPosition = transform.position + transform.forward; // in front of NPC
+            Vector3 dropPosition = transform.position + transform.forward; 
             Instantiate(healthItemPrefab, dropPosition, Quaternion.identity);
             hasDropped = true;
         }

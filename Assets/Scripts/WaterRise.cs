@@ -22,7 +22,7 @@ public class WaterRise : MonoBehaviour
     private Vector3 startPosition;
     private bool isRising = true;
 
-    public GameObject deathMessagePanel; // ✅ Updated to GameObject for entire panel
+    public GameObject deathMessagePanel; 
     public float restartDelay = 3f;
 
     void Start()
@@ -45,7 +45,7 @@ public class WaterRise : MonoBehaviour
 
         if (deathMessagePanel != null)
         {
-            deathMessagePanel.SetActive(false); // ✅ Hide panel at start
+            deathMessagePanel.SetActive(false); 
         }
     }
 
@@ -100,7 +100,7 @@ public class WaterRise : MonoBehaviour
     {
         if (deathMessagePanel != null)
         {
-            deathMessagePanel.SetActive(true); // ✅ Show the whole "Game Over" panel
+            deathMessagePanel.SetActive(true); 
         }
 
         Invoke("RestartGame", restartDelay);

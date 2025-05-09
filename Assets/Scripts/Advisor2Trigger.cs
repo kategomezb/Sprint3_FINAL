@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Advisor2Trigger : MonoBehaviour
 {
-    [SerializeField] private Advisor2NPCSystem npcSystem;  // Reference to the NPCSystem
+    [SerializeField] private Advisor2NPCSystem npcSystem;// This is my reference to the NPCSystem
     [SerializeField] private AudioSource npcSound;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the player enters the trigger zone
+        // This will help me to check if the player enters the trigger zone
         if (other.CompareTag("Player"))
         {
 
@@ -21,7 +21,7 @@ public class Advisor2Trigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the player exits the trigger zone
+        // This will help me to check if the player exits the trigger zone
         if (other.CompareTag("Player"))
         {
 
